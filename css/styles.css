@@ -1,0 +1,146 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: grey; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
+
+li {
+  margin: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  color: white; }
+
+#menu {
+  display: flex;
+  flex-direction: row; }
+
+#navMobile {
+  display: block;
+  right: 0;
+  position: absolute; }
+
+#navWeb {
+  display: none; }
+
+#navElements {
+  width: 100vw;
+  display: none;
+  position: absolute;
+  z-index: 100; }
+
+.gridmovies {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, 1fr);
+  width: auto; }
+
+.movie1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2; }
+
+.movie2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3; }
+
+.movie3 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4; }
+
+.movie4 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 4;
+  grid-column-end: 5; }
+
+.movie5 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2; }
+
+.movie6 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3; }
+
+.movie7 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4; }
+
+.movie8 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5; }
+
+.movie9 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2; }
+
+.movie10 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3; }
+
+.movie11 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4; }
+
+.movie12 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 5; }
+
+footer {
+  height: 10vh; }
+
+.some {
+  margin-top: 4%;
+  text-align: center;
+  color: white; }
+
+#navMobile {
+  display: block; }
+
+#navWeb {
+  display: block; }
+
+/*# sourceMappingURL=styles.css.map */
