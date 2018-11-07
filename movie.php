@@ -39,22 +39,20 @@
 <!-- i <body> har man alt indhold på siden -->
 <body>
 <header>
-    <div id="menu">
-        <div class="logo"><p>MWM</p></div>
+    <div class="menu">
+        <div class="logo"><i class="fas fa-film"></i><p>MWM</p></div>
 
-        <nav id="navWeb">
-            <a href="">Populære film</a>
-            <a href="">Genre</a>
-            <a href="">Bruger</a>
+        <nav>
+            <div class="navMobile">
+                <span id="navBars" class="fa fa-bars"></span>
+            </div>
+            <div id="navElements">
+                <a href="#"><i class="fas fa-thumbs-up"></i>Populære film</a>
+                <a href="#"><i class="fas fa-play-circle"></i>Genre</a>
+                <a href="#"><i class="fas fa-user"></i>Bruger</a>
+            </div>
         </nav>
-        <nav id="navElements">
-            <a href="">POPULÆRE FILM</a>
-            <a href="">GENRE</a>
-            <a href="">BRUGER</a>
-        </nav>
-        <nav id="navMobile">
-            <i id="navBars" class="fas fa-bars fa-2x"></i>
-        </nav>
+
     </div>
 </header>
 
@@ -62,50 +60,62 @@
     <div class="gridmovies">
         <div class="movie1">
             <img src="images/mwm/avatar.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie2">
             <img src="images/mwm/avenger.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie3">
             <img src="images/mwm/deadpool.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie4">
             <img src="images/mwm/game_night.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie5">
             <img src="images/mwm/incredibles_2.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie6">
             <img src="images/mwm/interstellar.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie7">
             <img src="images/mwm/jumanji.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie8">
             <img src="images/mwm/split.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie9">
             <img src="images/mwm/titanic.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie10">
             <img src="images/mwm/the_greatest_showman.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie11">
             <img src="images/mwm/the_notebook.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
         <div class="movie12">
             <img src="images/mwm/thor_ragnarok.jpg" alt="film">
+            <p>Title <br> Rating</p>
         </div>
 
     </div>
@@ -113,6 +123,8 @@
 
 
 <footer>
+    <div class="footertx"><p>Følg os</p></div>
+
     <div class="some">
         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
         <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
@@ -125,21 +137,40 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
-    $(document).ready(function (e) {
+    $(document).ready(function(e) {
+        // nav open = 0 betyder at når burgermenuen ikke er åben
+        // nav open =  1 betyder at burgermenuen er åben.
+        var navOpen = 0;
 
-        $("#navMobile").click(function (e) {
-            $("#navElements").slideToggle(300);
+        //her gør man det muligt at klikke på burgermenuen
+        //samt få den til at menuen kan rulle op og ned.
+        $("#navBars").click(function(e) {
+
+            if(navOpen ==1){
+                $("#navElements").slideUp(200);
+                navOpen=0;
+            } else{
+                $("#navElements").slideDown(500);
+                navOpen=1;
+            }
         });
 
+        // resize gør at når du laver siden større så forsvinder slidedownen. hvis menuen er åben.
         $(window).resize(function (e) {
             var width = $(window).width();
 
-            if(width > 768) {
-                $("#navElements").css("display", "none");
+            if(width>767) {
+                $("#navElements").css({"display":"-webkit-flex","display":"flex"}); // får elementerne til at flexe igen efter udvidelse
+            } else {
+                $("#navElements").css("display","none");// ellers vises de ikke = display none..
+                navOpen=0
             }
 
-        });
+        })
+
+
     });
+
 </script>
 </body>
 </html>
