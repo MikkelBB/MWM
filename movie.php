@@ -54,6 +54,8 @@
         </nav>
 
     </div>
+
+    <hr size="5px" width="90%" color="white">
 </header>
 
 <content>
@@ -119,6 +121,7 @@
         </div>
 
     </div>
+    <hr size="5px" width="90%" color="white">
 </content>
 
 
@@ -128,7 +131,7 @@
     <div class="some">
         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
         <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
     </div>
 </footer>
 
