@@ -9,6 +9,7 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
     $mRating = $_POST["mRating"];
     $mBeskrivelse = $_POST["mBeskrivelse"];
     $mBillede = $_POST["mBillede"];
+
 // Create database connection
     $db = mysqli_connect("localhost", "root", "", "mwm");
 
@@ -21,13 +22,13 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
         $mBillede = $_FILES['mBillede']['name'];
 
         // image file directory
-        $target = "images/".basename($mBillede);
+        $target = "images/mwm/".basename($mBillede);
 
         $sql = "INSERT INTO movies (mBillede) VALUES ('$mBillede')";
         // execute query
         mysqli_query($db, $sql);
 
-        if (move_uploaded_file($_FILES['billede']['tmp_name'], $target)) {
+        if (move_uploaded_file($_FILES['mBillede']['tmp_name'], $target)) {
             $msg = "Image uploaded successfully";
         }else{
             $msg = "Failed to upload image";
@@ -131,12 +132,12 @@ echo $movies["mName"]. "<br>".$movies["mGenre"].$movies["mBillede"]."<br><br>";
 
     <br>
     <label for="billede">Billede</label>
-    <input type="file" name="mBillede" id="billede" placeholder="billede" value="1000000">
+    <input type="file" name="mBillede" id="billede" placeholder="billede" value="">
 
 
     <br>
 
-    <button type="submit">Tilføj film</button>
+    <button type="submit" name="upload">Tilføj film</button>
 
 </form>
 
