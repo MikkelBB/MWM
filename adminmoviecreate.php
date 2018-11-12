@@ -10,11 +10,6 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
     $mBeskrivelse = $_POST["mBeskrivelse"];
     $mBillede = $_POST["mBillede"];
 
-// Create database connection
-    $db = mysqli_connect("localhost", "root", "", "mwm");
-
-// Initialize message variable
-    $msg = "";
 
 // If upload button is clicked ...
     if (isset($_POST['upload'])) {
