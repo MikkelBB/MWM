@@ -71,7 +71,7 @@ echo $movies["mName"]. "<br>".$movies["mGenre"].$movies["mBillede"]."<br><br>";
 
 <!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
 <head>
-
+ 
     <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
     <meta charset="utf-8">
 
