@@ -1,3 +1,8 @@
+<?php
+require("db/db.php");
+
+?>
+
 <!doctype html>
 <!-- Fortæller det er html5 -->
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
@@ -92,9 +97,18 @@
 <section>
 
     <div class="flexmovies">
+        <?php
+        $moviesQuery = mysqli_query($db, "SELECT * FROM movies"); //muligt at få den til at gå fra å-a hvis man sætter - ORDER BY sName DESC. Står for descending
+        while($movies = mysqli_fetch_assoc($moviesQuery)
+        ){
+            echo "<div class='flexing'>".$movies["mBillede"]."<br>".$movies["mName"]. "<br>".$movies["mRating"]."<br><br></div>";
+        }
+        ?>
+
         <div class="movie1">
             <img src="images/mwm/avatar.jpg" alt="film">
             <p>Title <br> Rating</p>
+
         </div>
 
         <div class="movie2">

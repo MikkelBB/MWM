@@ -39,6 +39,22 @@
 <!-- i <body> har man alt indhold på siden -->
 <body>
 
+<?php
+require("db/db.php");
+
+$deleteId=$_GET["id"];
+
+$dbStudents=mysqli_query($db, "DELETE FROM movies WHERE mId= '$deleteId'");
+
+
+
+
+?>
+
+<script>
+    alert("den er slettet");
+    document.location='adminmovies.php';
+</script>
 
 
 
