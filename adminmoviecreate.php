@@ -10,11 +10,6 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
     $mBeskrivelse = $_POST["mBeskrivelse"];
     $mBillede = $_POST["mBillede"];
 
-// Create database connection
-    $db = mysqli_connect("localhost", "root", "", "mwm");
-
-// Initialize message variable
-    $msg = "";
 
 // If upload button is clicked ...
     if (isset($_POST['upload'])) {
@@ -74,7 +69,7 @@ echo $movies["mName"]. "<br>".$movies["mGenre"].$movies["mBillede"]."<br><br>";
 
 <!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
 <head>
-
+ 
     <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
     <meta charset="utf-8">
 
