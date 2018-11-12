@@ -52,9 +52,7 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
 }
 ?>
 
-<?php
 
-?>
 
 <?php
 
