@@ -78,102 +78,16 @@ img {
     margin-bottom: 5%;
     justify-content: space-evenly; }
 
-  .adminflex {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    text-align: center;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 5%; }
-
-  .admintext {
-    margin-top: 15%;
-    font-size: 20pt; }
-
-  .admintext a {
-    color: red; }
-
-  .opret {
-    text-align: center;
-    font-size: 25pt;
-    margin-top: 5%; }
-
-  .movie1 {
+  .flexing {
     display: inline-block;
     margin: 0 1em;
     flex-grow: 1;
     width: calc(25% - 2em);
     padding-bottom: 5%; }
 
-  .movie2 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
-
-  .movie3 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
-
-  .movie4 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
-
-  .movie5 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em);
-    padding-bottom: 5%; }
-
-  .movie6 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
-
-  .movie7 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
-
-  .movie8 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
-
-  .movie9 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em);
-    padding-bottom: 5%; }
-
-  .movie10 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
-
-  .movie11 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
-
-  .movie12 {
-    display: inline-block;
-    margin: 0 1em;
-    flex-grow: 1;
-    width: calc(25% - 2em); }
+  .MoviePicture {
+    margin: 60px 0px 60px 200px;
+    width: 400px; }
 
   .footertx {
     margin-top: 4%;

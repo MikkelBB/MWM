@@ -15,7 +15,7 @@ require("db/db.php");
     <meta charset="utf-8">
 
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Movies</title>
+    <title>MWM Movies</title>
 
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
 
@@ -78,8 +78,6 @@ require("db/db.php");
 
         </div>
 
-</header>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <script>
@@ -90,9 +88,10 @@ require("db/db.php");
     });
 </script>
 
+</header>
+
+
     <hr size="5px" width="90%" color="white">
-
-
 
 <section>
 
@@ -101,77 +100,15 @@ require("db/db.php");
         $moviesQuery = mysqli_query($db, "SELECT * FROM movies"); //muligt at få den til at gå fra å-a hvis man sætter - ORDER BY sName DESC. Står for descending
         while($movies = mysqli_fetch_assoc($moviesQuery)
         ){
-            echo "<div class='flexing'>"."<img src='images/mwm/".$movies["mBillede"]."'>".$movies["mBillede"]."<br>".$movies["mName"]. "<br>".$movies["mRating"]."<br><br></div>";
+            echo "<div class='flexing'>"."<a href='movie.php?id=".$movies["mId"]."'><img src='images/mwm/".$movies["mBillede"]."'></a>"."<br>".$movies["mName"]. "<br>".$movies["mRating"]."<br><br></div>";
         }
         ?>
-
-        <div class="movie1">
-            <img src="images/mwm/avatar.jpg" alt="film">
-            <p>Title <br> Rating</p>
-
-        </div>
-
-        <div class="movie2">
-            <img src="images/mwm/avenger.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie3">
-            <img src="images/mwm/deadpool.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie4">
-            <img src="images/mwm/game_night.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie5">
-            <img src="images/mwm/incredibles_2.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie6">
-            <img src="images/mwm/interstellar.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie7">
-            <img src="images/mwm/jumanji.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie8">
-            <img src="images/mwm/split.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie9">
-            <img src="images/mwm/titanic.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie10">
-            <img src="images/mwm/the_greatest_showman.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie11">
-            <img src="images/mwm/the_notebook.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
-
-        <div class="movie12">
-            <img src="images/mwm/thor_ragnarok.jpg" alt="film">
-            <p>Title <br> Rating</p>
-        </div>
 
     </div>
 
 </section>
 
     <hr size="5px" width="90%" color="white">
-
 
 <footer>
     <div class="footertx"><p>Følg os</p></div>

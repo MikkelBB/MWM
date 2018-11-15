@@ -1,3 +1,8 @@
+<?php
+require("db/db.php");
+
+?>
+
 <!doctype html>
 <!-- Fortæller det er html5 -->
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
@@ -74,7 +79,7 @@
 
         </div>
 
-</header>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -85,8 +90,30 @@
         });
     });
 </script>
+</header>
 
 <hr size="5px" width="90%" color="white">
+
+<section>
+
+<?php
+
+$readId = $_GET["id"];
+
+$moviesQuery = mysqli_query($db, "SELECT * FROM movies WHERE mId = '$readId'");
+$movies = mysqli_fetch_assoc($moviesQuery);
+
+echo "<div class='MoviePicture'><img src='images/mwm/".$movies["mBillede"]."'></div>";
+echo $movies["mName"];
+echo $movies["mGenre"];
+echo $movies["mAarstal"];
+echo $movies["mTid"];
+echo $movies["mRating"];
+echo $movies["mBeskrivelse"];
+
+
+?>
+</section>
 
 <hr size="5px" width="90%" color="white">
 
