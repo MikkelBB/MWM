@@ -31,7 +31,7 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
             $msg = "Failed to upload image";
         }
 
-    $result = mysqli_query($db, "SELECT * FROM movies");
+
 
     $insert = mysqli_query($db, "INSERT INTO movies (mName, mGenre, mAarstal, mTid, mRating, mBeskrivelse,mBillede) 
     VALUES('$mName','$mGenre', '$mAarstal', '$mTid','$mRating','$mBeskrivelse','$mBillede')");

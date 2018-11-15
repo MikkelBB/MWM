@@ -89,7 +89,10 @@ require("db/db.php");
 </script>
 
 <hr size="5px" width="90%" color="white">
-<div class="opret"><a href="adminmoviecreate.php">Opret ny film</a><br><br></div>
+
+<div class="opret">
+    <a href="adminmoviecreate.php">Opret ny film</a>
+</div>
 
 
 <?php
