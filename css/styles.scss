@@ -122,8 +122,35 @@ img {
 
   }
 
+  .adminflex {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+  }
 
- // Footer
+  .admintext {
+    margin-top: 15%;
+    font-size: 20pt;
+  }
+
+  .admintext a {
+    color: red;
+  }
+
+  .opret {
+    text-align: center;
+    font-size: 25pt;
+    margin-top: 5%;
+  }
+
+
+
+  // Footer
 
   .footertx{
     margin-top: 4%;
