@@ -89,18 +89,19 @@ require("db/db.php");
 </script>
 
 <hr size="5px" width="90%" color="white">
+<div class="opret"><a href="adminmoviecreate.php">Opret ny film</a><br><br></div>
 
-<a href="adminmoviecreate.php">Opret ny film</a><br><br>
 
 <?php
 
 $moviesQuery = mysqli_query($db, "SELECT * FROM movies"); //muligt at få den til at gå fra å-a hvis man sætter - ORDER BY sName DESC. Står for descending
 while($movies = mysqli_fetch_assoc($moviesQuery)
 ){
-    echo $movies["mName"]. "<br>".$movies["mGenre"].$movies["mBillede"]."<br><br>".$movies["mRating"]."<br><br>".
+    echo "<div class='adminflex'><img src='images/mwm/".$movies["mBillede"]."'><div class='admintext'>".$movies["mName"]. "<br><br>".$movies["mGenre"]."<br><br>".$movies["mRating"]."<br><br>".
         $movies["mTid"]."<br><br>".$movies["mAarstal"]."<br><br>".$movies["mBeskrivelse"]."<br><br>".
-        "<a href='adminmoviedelete.php?id=".$movies["mId"]."'>slet</a>".
-        "<br><br><br>";
+        "<a href='adminmovieupdate.php?id=".$movies["mId"]."'>Rediger</a><br><br>".
+        "<a href='adminmoviedelete.php?id=".$movies["mId"]."'>Slet</a>".
+        "<br><br><br></div></div>";
 
 
 }
