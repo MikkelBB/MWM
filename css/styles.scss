@@ -98,17 +98,19 @@ img {
 
   .flexmovies{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  flex-wrap: wrap;
     color: white;
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
+    justify-content: space-evenly;
   }
 
-  .flexing{
+  .flexing {
 
   }
+
+
 
   .movie1{
     display: inline-block;

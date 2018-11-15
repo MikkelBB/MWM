@@ -101,7 +101,7 @@ require("db/db.php");
         $moviesQuery = mysqli_query($db, "SELECT * FROM movies"); //muligt at få den til at gå fra å-a hvis man sætter - ORDER BY sName DESC. Står for descending
         while($movies = mysqli_fetch_assoc($moviesQuery)
         ){
-            echo "<div class='flexing'>".$movies["mBillede"]."<br>".$movies["mName"]. "<br>".$movies["mRating"]."<br><br></div>";
+            echo "<div class='flexing'>"."<img src='images/mwm/".$movies["mBillede"]."'>".$movies["mBillede"]."<br>".$movies["mName"]. "<br>".$movies["mRating"]."<br><br></div>";
         }
         ?>
 

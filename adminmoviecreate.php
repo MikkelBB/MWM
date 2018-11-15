@@ -8,11 +8,12 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
     $mTid = $_POST["mTid"];
     $mRating = $_POST["mRating"];
     $mBeskrivelse = $_POST["mBeskrivelse"];
-    $mBillede = $_POST["mBillede"];
+    $mBillede = $_FILES["mBillede"]["name"];
+    $mId = $_POST["mId"];
 
 
 // If upload button is clicked ...
-    if (isset($_POST['upload'])) {
+
         // Get image name
         $mBillede = $_FILES['mBillede']['name'];
 
@@ -23,20 +24,22 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
         // execute query
         mysqli_query($db, $sql);
 
+
         if (move_uploaded_file($_FILES['mBillede']['tmp_name'], $target)) {
             $msg = "Image uploaded successfully";
         }else{
             $msg = "Failed to upload image";
         }
-    }
+
     $result = mysqli_query($db, "SELECT * FROM movies");
 
     $insert = mysqli_query($db, "INSERT INTO movies (mName, mGenre, mAarstal, mTid, mRating, mBeskrivelse,mBillede) 
     VALUES('$mName','$mGenre', '$mAarstal', '$mTid','$mRating','$mBeskrivelse','$mBillede')");
 
+
     ?>
     <script>
-        alert("du har vundet");
+        alert('<?php echo $msg; ?>');
         document.location='adminmoviecreate.php';
     </script>
 
@@ -54,7 +57,7 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
 $moviesQuery = mysqli_query($db, "SELECT * FROM movies"); //muligt at få den til at gå fra å-a hvis man sætter - ORDER BY sName DESC. Står for descending
 while($movies = mysqli_fetch_assoc($moviesQuery)
 ){
-echo $movies["mName"]. "<br>".$movies["mGenre"].$movies["mBillede"]."<br><br>";
+echo $movies["mName"]. "<br>".$movies["mGenre"]."<img src='images/mwm/".$movies["mBillede"]."'><br><br>";
 
 
 }
@@ -101,35 +104,35 @@ echo $movies["mName"]. "<br>".$movies["mGenre"].$movies["mBillede"]."<br><br>";
 
 <form method="post" action="adminmoviecreate.php" enctype="multipart/form-data">
     <label for="name">Navn</label>
-    <input type="text" name="mName" id="navn" placeholder="Navn" value="">
+    <input type="text" name="mName" id="navn" placeholder="Navn" value="<?php echo $movies["mId"];?>">
     <br>
     <label for="genre">Genre</label>
-    <input type="text" name="mGenre" id="genre" placeholder="genre" value="">
+    <input type="text" name="mGenre" id="genre" placeholder="genre" value="<?php echo $movies["mId"];?>">
 
     <br>
     <label for="aarstal">aarstal</label>
-    <input type="number" name="mAarstal" id="aarstal" placeholder="aarstal" value="">
+    <input type="number" name="mAarstal" id="aarstal" placeholder="aarstal" value="<?php echo $movies["mId"];?>">
 
     <br>
     <label for="tid">Tid</label>
-    <input type="number" name="mTid" id="tid" placeholder="tid" value="">
+    <input type="number" name="mTid" id="tid" placeholder="tid" value="<?php echo $movies["mId"];?>">
 
     <br>
     <label for="rating">Rating</label>
-    <input type="number" name="mRating" id="rating" placeholder="rating" value="">
+    <input type="number" name="mRating" id="rating" placeholder="rating" value="<?php echo $movies["mId"];?>">
 
     <br>
     <label for="beskrivelse">Beskrivelse</label>
-    <input type="text" name="mBeskrivelse" id="beskrivelse" placeholder="beskrivelse" value="">
+    <input type="text" name="mBeskrivelse" id="beskrivelse" placeholder="beskrivelse" value="<?php echo $movies["mId"];?>">
     <br>
 
     <br>
     <label for="billede">Billede</label>
-    <input type="file" name="mBillede" id="billede" placeholder="billede" value="">
+    <input type="file" name="mBillede" id="billede" placeholder="billede" value="<?php echo $movies["mId"];?>">
 
 
     <br>
-
+    <input type="hidden" name="mId" value="<?php echo $movies["mId"];?>">
     <button type="submit" name="upload">Tilføj film</button>
 
 </form>
