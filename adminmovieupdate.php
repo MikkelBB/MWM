@@ -72,26 +72,26 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
 
 <form method="post" action="adminmovieupdate.php" enctype="multipart/form-data">
     <label for="name">Navn</label>
-    <input type="text" name="mName" id="navn" placeholder="Navn" value="<?php echo $movies["mId"];?>">
+    <input type="text" name="mName" id="navn" placeholder="Navn" value="<?php echo $movies["mName"];?>">
     <br>
     <label for="genre">Genre</label>
-    <input type="text" name="mGenre" id="genre" placeholder="genre" value="<?php echo $movies["mId"];?>">
+    <input type="text" name="mGenre" id="genre" placeholder="genre" value="<?php echo $movies["mGenre"];?>">
 
     <br>
     <label for="aarstal">aarstal</label>
-    <input type="number" name="mAarstal" id="aarstal" placeholder="aarstal" value="<?php echo $movies["mId"];?>">
+    <input type="number" name="mAarstal" id="aarstal" placeholder="aarstal" value="<?php echo $movies["mAarstal"];?>">
 
     <br>
     <label for="tid">Tid</label>
-    <input type="number" name="mTid" id="tid" placeholder="tid" value="<?php echo $movies["mId"];?>">
+    <input type="number" name="mTid" id="tid" placeholder="tid" value="<?php echo $movies["mTid"];?>">
 
     <br>
     <label for="rating">Rating</label>
-    <input type="number" name="mRating" id="rating" placeholder="rating" value="<?php echo $movies["mId"];?>">
+    <input type="number" name="mRating" id="rating" placeholder="rating" value="<?php echo $movies["mRating"];?>">
 
     <br>
     <label for="beskrivelse">Beskrivelse</label>
-    <input type="text" name="mBeskrivelse" id="beskrivelse" placeholder="beskrivelse" value="<?php echo $movies["mId"];?>">
+    <input type="text" name="mBeskrivelse" id="beskrivelse" placeholder="beskrivelse" value="<?php echo $movies["mBeskrivelse"];?>">
     <br>
 
     <br>

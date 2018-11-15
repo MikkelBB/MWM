@@ -20,10 +20,6 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
         // image file directory
         $target = "images/mwm/".basename($mBillede);
 
-        $sql = "INSERT INTO movies (mBillede) VALUES ('$mBillede')";
-        // execute query
-        mysqli_query($db, $sql);
-
 
         if (move_uploaded_file($_FILES['mBillede']['tmp_name'], $target)) {
             $msg = "Image uploaded successfully";
