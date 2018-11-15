@@ -57,7 +57,7 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
 $moviesQuery = mysqli_query($db, "SELECT * FROM movies"); //muligt at få den til at gå fra å-a hvis man sætter - ORDER BY sName DESC. Står for descending
 while($movies = mysqli_fetch_assoc($moviesQuery)
 ){
-echo $movies["mName"]. "<br>".$movies["mGenre"]."<img src='images/mwm/".$movies["mBillede"]."'><br><br>";
+
 
 
 }
