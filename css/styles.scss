@@ -111,6 +111,32 @@ img {
   }
 
 
+  .adminflex{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+  }
+
+
+  .admintext{
+    margin-top: 15%;
+    font-size: 20pt;
+  }
+
+  .admintext a{
+    color: red;
+  }
+
+  .opret{
+    text-align: center;
+    font-size: 25pt;
+    margin-top: 5%;
+  }
 
   .movie1{
     display: inline-block;
