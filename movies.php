@@ -59,7 +59,7 @@ require("db/db.php");
             <div class="genretext"><a href=""><h3>Film genre</h3></a></div>
 
             <div class="user"><i class="fas fa-user"></i></div>
-            <div class="usertext"><a href=""><h3>Bruger</h3></a></div>
+            <div class="usertext"><a href=""><h3>Login</h3></a></div>
 
         </div>
 

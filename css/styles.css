@@ -89,6 +89,37 @@ img {
     margin: 60px 0px 60px 200px;
     width: 400px; }
 
+  .movieflex {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    color: white;
+    margin-top: -660px;
+    margin-left: 500px;
+    position: absolute; }
+
+  .moviebeskrivelse {
+    padding: 2% 60% 2% 0%; }
+
+  .movierating {
+    padding-top: 2%; }
+
+  .addlist {
+    display: inline-flex;
+    color: white;
+    width: 150px;
+    height: 30px;
+    background-color: red;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -340px;
+    margin-left: 650px;
+    position: absolute; }
+
+  .fa-plus {
+    margin: 5px;
+    font-size: 20px; }
+
   .adminflex {
     display: flex;
     flex-direction: row;

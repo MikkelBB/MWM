@@ -60,7 +60,7 @@ require("db/db.php");
             <div class="genretext"><a href=""><h3>Film genre</h3></a></div>
 
             <div class="user"><i class="fas fa-user"></i></div>
-            <div class="usertext"><a href=""><h3>Bruger</h3></a></div>
+            <div class="usertext"><a href=""><h3>Log ind</h3></a></div>
 
         </div>
 
@@ -103,16 +103,24 @@ $readId = $_GET["id"];
 $moviesQuery = mysqli_query($db, "SELECT * FROM movies WHERE mId = '$readId'");
 $movies = mysqli_fetch_assoc($moviesQuery);
 
+/*
 echo "<div class='MoviePicture'><img src='images/mwm/".$movies["mBillede"]."'></div>";
-echo $movies["mName"];
-echo $movies["mGenre"];
-echo $movies["mAarstal"];
-echo $movies["mTid"];
-echo $movies["mRating"];
-echo $movies["mBeskrivelse"];
+echo "<div class='Moviebox'><div class='MovieNavn'>".$movies["mName"].$movies["mGenre"].$movies["mAarstal"].$movies["mTid"]
+     .$movies["mRating"].$movies["mBeskrivelse"]."</div></div>"*/
+
+echo "<div class='MoviePicture'><img src='images/mwm/".$movies["mBillede"]."'></div>";
+
+echo "<div class='movieflex'><div class='movietext'><h2>".$movies["mName"]."</h2></div>".
+     "<div class='moviegenre'>".$movies["mGenre"]."</div>".
+     "<div class='moviebeskrivelse'>".$movies["mBeskrivelse"]."</div>".
+     "<div class='movietid'><p>Spilletid: </p>".$movies["mTid"]."</div>".
+     "<div class='movierating'><p>Rating: </p>".$movies["mRating"]."</div></div>";
+
+echo "<a href='#'><div class='addlist'><i class='fas fa-plus'></i><p>Tilføj til liste</p></div></a>";
 
 
 ?>
+
 </section>
 
 <hr size="5px" width="90%" color="white">
