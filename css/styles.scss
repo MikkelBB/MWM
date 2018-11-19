@@ -157,30 +157,24 @@ img {
     font-size: 20px;
   }
 
-  .adminflex {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    text-align: center;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 5%;
-  }
-
-  .admintext {
-    margin-top: 15%;
-    font-size: 20pt;
-  }
-
-  .admintext a {
-    color: red;
+  .redislet{
+    margin-top: -320px;
+    margin-left: 650px;
+    position: absolute;
   }
 
   .opret {
+    display: inline-flex;
+    color: white;
+    width: 150px;
+    height: 30px;
+    background-color: red;
     text-align: center;
-    font-size: 25pt;
+    font-size: 20px;
     margin-top: 5%;
+    padding-bottom: 2%;
+    margin-left: 650px;
+
   }
 
 

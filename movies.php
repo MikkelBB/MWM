@@ -48,7 +48,7 @@ require("db/db.php");
 <header>
 
     <div class="menu">
-        <div class="logo"><i class="fas fa-film"></i><h1>MWM</h1></div>
+        <div class="logo"><a href="movies.php"><i class="fas fa-film"></i></a><h1>MWM</h1></div>
 
         <!--Web header menu-->
         <div class="webmenu">

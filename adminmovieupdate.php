@@ -78,7 +78,7 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
     <input type="text" name="mGenre" id="genre" placeholder="genre" value="<?php echo $movies["mGenre"];?>">
 
     <br>
-    <label for="aarstal">aarstal</label>
+    <label for="aarstal">Årstal</label>
     <input type="number" name="mAarstal" id="aarstal" placeholder="aarstal" value="<?php echo $movies["mAarstal"];?>">
 
     <br>
@@ -96,7 +96,7 @@ if (isset($_POST["mName"]) && !empty($_POST["mName"])){
 
     <br>
     <input type="hidden" name="mId" value="<?php echo $movies["mId"];?>">
-    <button type="submit" name="upload">Tilføj film</button>
+    <button type="submit" name="upload">Opdater filmen</button>
 
 </form>
 

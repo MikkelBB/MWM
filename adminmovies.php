@@ -46,7 +46,7 @@ require("db/db.php");
 <header>
 
     <div class="menu">
-        <div class="logo"><i class="fas fa-film"></i><h1>MWM</h1></div>
+        <div class="logo"><a href="movies.php"><i class="fas fa-film"></i></a><h1>MWM</h1></div>
 
         <!--Web header menu-->
         <div class="webmenu">
@@ -90,9 +90,7 @@ require("db/db.php");
 
 <hr size="5px" width="90%" color="white">
 
-<div class="opret">
-    <a href="adminmoviecreate.php">Opret ny film</a>
-</div>
+<div class="opret"><i class='fas fa-plus'></i><a href="adminmoviecreate.php">Opret film</a></div>
 
 
 <?php
@@ -100,11 +98,16 @@ require("db/db.php");
 $moviesQuery = mysqli_query($db, "SELECT * FROM movies"); //muligt at få den til at gå fra å-a hvis man sætter - ORDER BY sName DESC. Står for descending
 while($movies = mysqli_fetch_assoc($moviesQuery)
 ){
-    echo "<div class='adminflex'><img src='images/mwm/".$movies["mBillede"]."'><div class='admintext'>".$movies["mName"]. "<br><br>".$movies["mGenre"]."<br><br>".$movies["mRating"]."<br><br>".
-        $movies["mTid"]."<br><br>".$movies["mAarstal"]."<br><br>".$movies["mBeskrivelse"]."<br><br>".
-        "<a href='adminmovieupdate.php?id=".$movies["mId"]."'>Rediger</a><br><br>".
-        "<a href='adminmoviedelete.php?id=".$movies["mId"]."'>Slet</a>".
-        "<br><br><br></div></div>";
+    echo "<div class='MoviePicture'><img src='images/mwm/".$movies["mBillede"]."'></div>";
+
+    echo"<div class='movieflex'><div class='movietext'><h2>".$movies["mName"]."</h2></div>".
+        "<div class='moviegenre'>".$movies["mGenre"]."</div>".
+        "<div class='moviebeskrivelse'>".$movies["mBeskrivelse"]."</div>".
+        "<div class='movietid'><p>Spilletid: </p>".$movies["mTid"]."</div>".
+        "<div class='movierating'><p>Rating: </p>".$movies["mRating"]."</div></div>".
+        "<div class='redislet'><a href='adminmovieupdate.php?id=".$movies["mId"]."'>Rediger</a><br><br>".
+        "<a href='adminmoviedelete.php?id=".$movies["mId"]."'>Slet</a></div>".
+        "</div></div>";
 
 
 }
